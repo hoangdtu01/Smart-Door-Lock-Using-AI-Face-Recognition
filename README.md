@@ -12,7 +12,7 @@ The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboar
 
 ---
 
-# ✨ Features
+# Features
 
 ## User Features
 
@@ -35,7 +35,7 @@ The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboar
 
 ---
 
-# 🏗 System Architecture
+# System Architecture
 
 ```text
 ESP32-CAM
@@ -69,14 +69,14 @@ Relay + Solenoid Lock
 
 ---
 
-# 🖼 Screenshots
+# Screenshots
 | user_dashboard                | admin_dashboard                 |
 | ------------------------- | ------------------------- |
 | <img width="1914" height="920" alt="Image" src="https://github.com/user-attachments/assets/3cfc365c-bed3-4ef9-9371-d81a73ceb884" /> |<img width="1919" height="924" alt="Image" src="https://github.com/user-attachments/assets/34c94977-475d-43e7-9969-3a975beea422" /> |
 
 ---
 
-# 🛠 Technologies
+# Technologies
 
 | Category         | Technology                      |
 | ---------------- | ------------------------------- |
@@ -92,7 +92,7 @@ Relay + Solenoid Lock
 
 ---
 
-# 📥 Download Models and Dataset
+# Download Models and Dataset
 
 Large files are not included in this repository due to GitHub size limitations.
 
