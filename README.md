@@ -1,9 +1,14 @@
 # 🔐 Smart Door Lock Using AI Face Recognition
 
-A smart door access control system using **SCRFD** for face detection and **ArcFace (iResNet50 Fine-tuning)** for face recognition.
+A smart door access control system using SCRFD for face detection and ArcFace (iResNet50 Fine-tuning) for face recognition. The iResNet50 model was fine-tuned from the original InsightFace backbone for academic and research purposes, so its recognition performance may not be as accurate or robust as the official pretrained InsightFace models.
 
 The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboard to provide real-time face registration, recognition, access monitoring, and automatic door unlocking.
 
+Note
+
+The Google Drive folder also provides the original InsightFace backbone weights and a mini version of the CASIA-WebFace dataset (approximately 1000 identities). These files are optional and are intended for users who want to reproduce the training process, perform transfer learning, or further fine-tune the ArcFace model.
+
+If you only want to run the face recognition system, downloading last_backbone.pth is sufficient.
 ---
 
 # ✨ Features
