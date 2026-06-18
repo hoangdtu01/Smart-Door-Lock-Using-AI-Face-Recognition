@@ -37,54 +37,7 @@ The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboar
 
 # System Architecture
 
-```text
-                          +----------------------+
-                          |   Data Acquisition   |
-                          |                      |
-                          |  OV2640 Camera       |
-                          +----------+-----------+
-                                     |
-                                     v
-                          +----------------------+
-                          |   ESP32-CAM Module   |
-                          +----------+-----------+
-                                     |
-                    HTTP MJPEG Stream / JPEG Capture
-                                     |
-                                     v
-+----------------------------------------------------------------+
-|                        AI Server                               |
-|                                                                |
-|  +------------------+      +-------------------------------+   |
-|  | FastAPI Backend  | ---> | SCRFD + ArcFace (iResNet50)   |   |
-|  +------------------+      +-------------------------------+   |
-|            |                               |                   |
-|            |                               |                   |
-|            v                               v                   |
-|     MySQL Database                 Face Embeddings            |
-+------------+------------------------------------+-------------+
-             |                                    |
-             |                                    |
-             v                                    v
-+------------------------+       +---------------------------+
-|   User Dashboard       |       |   Admin Dashboard        |
-|                        |       |                           |
-| • Live Camera Preview  |       | • Face Registration       |
-| • Verification Result  |       | • User Management         |
-| • Door Status          |       | • Access Logs             |
-+------------------------+       +---------------------------+
-
-                                     |
-                                     v
-
-                           +--------------------+
-                           | Peripheral Devices |
-                           |                    |
-                           | Relay Module       |
-                           | Solenoid Lock      |
-                           | Status LED         |
-                           +--------------------+
-```
+<img width="1537" height="1023" alt="Image" src="https://github.com/user-attachments/assets/7cb61836-fdee-4135-a3be-40de1a23f299" />
 
 ---
 
