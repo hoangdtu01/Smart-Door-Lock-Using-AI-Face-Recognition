@@ -1,14 +1,15 @@
 # 🔐 Smart Door Lock Using AI Face Recognition
 
-A smart door access control system using SCRFD for face detection and ArcFace (iResNet50 Fine-tuning) for face recognition. The iResNet50 model was fine-tuned from the original InsightFace backbone for academic and research purposes, so its recognition performance may not be as accurate or robust as the official pretrained InsightFace models.
+A smart door access control system using **SCRFD** for face detection and **ArcFace (iResNet50 Fine-tuning)** for face recognition. The iResNet50 model was fine-tuned from the original InsightFace backbone for academic and research purposes, so its recognition performance may not be as accurate or robust as the official pretrained InsightFace models.
 
 The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboard to provide real-time face registration, recognition, access monitoring, and automatic door unlocking.
 
-Note
+> **Note**
+>
+> The Google Drive folder also provides the original **InsightFace backbone weights** and a mini version of the **CASIA-WebFace dataset** (approximately 1000 identities). These files are optional and are intended for users who want to reproduce the training process, perform transfer learning, or further fine-tune the ArcFace model.
+>
+> If you only want to run the face recognition system, downloading `last_backbone.pth` is sufficient.
 
-The Google Drive folder also provides the original InsightFace backbone weights and a mini version of the CASIA-WebFace dataset (approximately 1000 identities). These files are optional and are intended for users who want to reproduce the training process, perform transfer learning, or further fine-tune the ArcFace model.
-
-If you only want to run the face recognition system, downloading last_backbone.pth is sufficient.
 ---
 
 # ✨ Features
@@ -64,6 +65,24 @@ MySQL Database
     ▼
 
 Relay + Solenoid Lock
+```
+
+---
+
+# 🖼 Screenshots
+
+Coming soon.
+
+Suggested images:
+
+```text
+docs/
+
+admin_dashboard.png
+
+user_dashboard.png
+
+system_architecture.png
 ```
 
 ---
@@ -322,7 +341,7 @@ This project is licensed under the MIT License.
 
 # 👨‍💻 Author
 
-Hoàng Đông A
+Trần Văn Hoàng - hoangdtu01@gmail.com
 
 Vietnam - Korea University of Information and Communication Technology (VKU)
 
@@ -332,4 +351,3 @@ https://github.com/hoangdtu01
 
 ```
 ```
-
