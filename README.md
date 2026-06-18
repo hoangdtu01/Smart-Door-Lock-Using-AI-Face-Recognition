@@ -38,33 +38,52 @@ The project integrates **ESP32-CAM**, **FastAPI**, **MySQL**, and a web dashboar
 # System Architecture
 
 ```text
-ESP32-CAM
-    │
-    │ HTTP Request
-    ▼
+                          +----------------------+
+                          |   Data Acquisition   |
+                          |                      |
+                          |  OV2640 Camera       |
+                          +----------+-----------+
+                                     |
+                                     v
+                          +----------------------+
+                          |   ESP32-CAM Module   |
+                          +----------+-----------+
+                                     |
+                    HTTP MJPEG Stream / JPEG Capture
+                                     |
+                                     v
++----------------------------------------------------------------+
+|                        AI Server                               |
+|                                                                |
+|  +------------------+      +-------------------------------+   |
+|  | FastAPI Backend  | ---> | SCRFD + ArcFace (iResNet50)   |   |
+|  +------------------+      +-------------------------------+   |
+|            |                               |                   |
+|            |                               |                   |
+|            v                               v                   |
+|     MySQL Database                 Face Embeddings            |
++------------+------------------------------------+-------------+
+             |                                    |
+             |                                    |
+             v                                    v
++------------------------+       +---------------------------+
+|   User Dashboard       |       |   Admin Dashboard        |
+|                        |       |                           |
+| • Live Camera Preview  |       | • Face Registration       |
+| • Verification Result  |       | • User Management         |
+| • Door Status          |       | • Access Logs             |
++------------------------+       +---------------------------+
 
-FastAPI AI Server
-    │
-    ├── SCRFD
-    │       │
-    │       ▼
-    │  Face Detection
-    │
-    ├── ArcFace (iResNet50)
-    │       │
-    │       ▼
-    │  Feature Extraction
-    │
-    └── Cosine Similarity
-            │
-            ▼
+                                     |
+                                     v
 
-MySQL Database
-
-    │
-    ▼
-
-Relay + Solenoid Lock
+                           +--------------------+
+                           | Peripheral Devices |
+                           |                    |
+                           | Relay Module       |
+                           | Solenoid Lock      |
+                           | Status LED         |
+                           +--------------------+
 ```
 
 ---
