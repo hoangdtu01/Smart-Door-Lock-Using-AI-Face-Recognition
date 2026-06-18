@@ -70,20 +70,9 @@ Relay + Solenoid Lock
 ---
 
 # 🖼 Screenshots
-
-Coming soon.
-
-Suggested images:
-
-```text
-docs/
-
-admin_dashboard.png
-
-user_dashboard.png
-
-system_architecture.png
-```
+| user_dashboard                | admin_dashboard                 |
+| ------------------------- | ------------------------- |
+| <img width="1914" height="920" alt="Image" src="https://github.com/user-attachments/assets/3cfc365c-bed3-4ef9-9371-d81a73ceb884" /> |<img width="1919" height="924" alt="Image" src="https://github.com/user-attachments/assets/34c94977-475d-43e7-9969-3a975beea422" /> |
 
 ---
 
